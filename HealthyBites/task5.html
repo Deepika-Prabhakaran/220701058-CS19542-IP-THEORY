@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Bites</title>
+    <link rel="stylesheet" href="task5.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Healthy Bites</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="contact-info">
+                <p>Call: 9999999999</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="left-section">
+            <h2>Why Nutrition?</h2>
+            <p>Nutrition as a vital issue is important...</p>
+            <ul>
+                <li>Improve Health</li>
+                <li>Reduce Weight</li>
+                <li>Change Lifestyle</li>
+                <li>Weekly Event Shows</li>
+            </ul>
+        </div>
+        
+        <div class="center-section">
+            <h2>Select a color to change the background of the page:</h2>
+            <input type="color" id="bg-color-picker">
+            <iframe src="https://en.wikipedia.org/wiki/Nutrition" frameborder="0"></iframe>
+        </div>
+        
+        <div class="right-section">
+            <h2>News</h2>
+            <p>Appeared in Famous Magazines...</p>
+            <h2>Resources</h2>
+            <p>Checkout our recent page...</p>
+            <h2>Events</h2>
+            <p>30 min everyday...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Healthy Bites. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bg-color-picker').addEventListener('input', function() {
+            document.body.style.backgroundColor = this.value;
+        });
+    </script>
+</body>
+</html>
