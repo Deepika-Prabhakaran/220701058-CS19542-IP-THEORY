@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Filters</h3>
+            <ul>
+                <li><a href="#" onclick="filterTasks(event, 'all')">All</a></li>
+                <li><a href="#" onclick="filterTasks(event, 'pending')">Pending</a></li>
+                <li><a href="#" onclick="filterTasks(event, 'completed')">Completed</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="task-form">
+                <h3>Add New Task</h3>
+                <form id="taskForm" onsubmit="addTask(event)">
+                    <input type="text" id="taskTitle" placeholder="Task Title" required>
+                    <textarea id="taskDesc" placeholder="Description"></textarea>
+                    <input type="date" id="taskDueDate" required>
+                    <button type="submit">Add Task</button>
+                </form>
+                <div id="feedback" class="feedback"></div>
+            </div>
+
+            <div class="task-list">
+                <h3>Tasks</h3>
+                <ul id="taskList"></ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Task Manager. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
