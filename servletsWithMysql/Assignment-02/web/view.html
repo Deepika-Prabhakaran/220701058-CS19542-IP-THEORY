@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Products</title>
+</head>
+<body>
+    <h1>View Products</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Actions</th>
+        </tr>
+        <%
+            try (Connection conn = DBUtil.getConnection();
+                 Statement stmt = conn.createStatement();
+                 ResultSet rs = stmt.executeQuery("SELECT * FROM products")) {
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String productName = rs.getString("name");
+                    String category = rs.getString("category");
+                    double price = rs.getDouble("price");
+                    int stock = rs.getInt("stock");
+        %>
+        <tr>
+            <td><%= id %></td>
+            <td><%= name %></td>
+            <td><%= category %></td>
+            <td><%= price %></td>
+            <td><%= stock %></td>
+            <td>
+                <a href="edit.html?id=<%= id %>">Edit</a> |
+                <a href="delete.html?id=<%= id %>">Delete</a>
+            </td>
+        </tr>
+        <%
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        %>
+    </table>
+    <a href="index.html">Back to Dashboard</a>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>AddProductServlets</servlet-name>
+        <servlet-class>AddProductServlets</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewProductServlet</servlet-name>
+        <servlet-class>ViewProductServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditProductServlets</servlet-name>
+        <servlet-class>EditProductServlets</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteProductServlets</servlet-name>
+        <servlet-class>DeleteProductServlets</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchProductServlet</servlet-name>
+        <servlet-class>SearchProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProductServlets</servlet-name>
+        <url-pattern>/AddProductServlets</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewProductServlet</servlet-name>
+        <url-pattern>/ViewProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditProductServlets</servlet-name>
+        <url-pattern>/EditProductServlets</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteProductServlets</servlet-name>
+        <url-pattern>/DeleteProductServlets</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchProductServlet</servlet-name>
+        <url-pattern>/SearchProductServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

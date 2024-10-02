@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+        function validateForm(){
+            const title=document.forms["bookForm"]["title"].value;
+            const author = document.forms["bookForm"]["author"].value;
+            const publisher = document.forms["bookForm"]["publisher"].value;
+            const edition = document.forms["bookForm"]["edition"].value;
+            const price = document.forms["bookForm"]["price"].value;
+              if (title === "" || author === "" || publisher === "" || edition === "" || price === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (!regex.test(price)) {
+                alert("Price must be a valid number with up to 2 decimal places.");
+                return false;
+            }
+            if (isNaN(price)) {
+                alert("Please enter a valid price.");
+                return false;}
+
+            return true;
+        }
+       </script>
+    </head>
+    <body>
+        <form name="bookForm" onsubmit="return validateForm()" action="connectservlet" method="post" >
+         
+        <input type="hidden" name="action" value="insert">
+            
+        <label for="accno">id:</label>
+        <input type="text" id="accno" name="accno"><br>
+        
+         <label for="title">name:</label>
+        <input type="text" id="title" name="title"><br>
+
+        <label for="author">category:</label>
+        <input type="text" id="author" name="author"><br>
+
+        <label for="publisher">price:</label>
+        <input type="text" id="publisher" name="publisher"><br>
+
+        <label for="edition">stock:</label>
+        <input type="text" id="edition" name="edition"><br>
+
+        
+        
+          <input type="submit" value="Submit">
+        </form>
+
+    </body>
+</html>
+
